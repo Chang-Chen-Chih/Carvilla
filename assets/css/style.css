@@ -710,4 +710,38 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
     0%   {bottom:0px;}
     100%  {bottom:7px;}
 }
+/* 🔧 對比度改善：new-cars 區域 */
+#new-cars p,
+#new-cars p.new-cars-para2,
+#new-cars span,
+#new-cars a {
+    color: #1a1a1a; /* 深灰，確保高對比 */
+}
+
+#new-cars h2 a span {
+    color: #1a1a1a;
+}
+
+button.welcome-btn.new-cars-btn {
+    background-color: #007bff; /* 深藍按鈕背景 */
+    color: #ffffff;            /* 白字 */
+    border: none;
+    font-weight: bold;
+}
+
+input.form-control {
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+input.form-control::placeholder {
+    color: #666;
+}
+
+input.form-control:focus {
+    outline: 2px solid #007bff;
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
 /*========================Thank you=================
