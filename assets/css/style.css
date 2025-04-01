@@ -743,5 +743,36 @@ input.form-control:focus {
     outline: 2px solid #007bff;
     box-shadow: 0 0 5px rgba(0,123,255,0.5);
 }
+button.welcome-btn.new-cars-btn {
+    background-color: #007bff; /* 深藍背景 */
+    color: #ffffff;            /* 白色文字 */
+    border: none;
+    font-weight: bold;
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+button.welcome-btn.new-cars-btn:hover {
+    background-color: #0056b3;
+}
+input.form-control {
+    color: #212529; /* 更深的文字色 */
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    font-size: 16px;
+    padding: 8px 12px;
+}
+
+input.form-control::placeholder {
+    color: #6c757d; /* 深一點的提示文字色 */
+}
+
+input.form-control:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
 
 /*========================Thank you=================
