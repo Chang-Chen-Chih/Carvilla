@@ -776,7 +776,28 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div><!-- 使用 lazy loading 屬性 -->
+				<img src="placeholder.jpg" data-src="real-image.jpg" class="lazyload" alt="Image description">
+				<script>
+				  document.addEventListener("DOMContentLoaded", function() {
+				    let lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
+				    if ("IntersectionObserver" in window) {
+				      let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+				        entries.forEach(function(entry) {
+				          if (entry.isIntersecting) {
+				            let lazyImage = entry.target;
+				            lazyImage.src = lazyImage.dataset.src;
+				            lazyImage.classList.remove("lazyload");
+				            lazyImageObserver.unobserve(lazyImage);
+				          }
+				        });
+				      });
+				      lazyImages.forEach(function(lazyImage) {
+				        lazyImageObserver.observe(lazyImage);
+				      });
+				    }
+				  });
+				</script>
 				<div class="footer-copyright">
 					<div class="row">
 						<div class="col-sm-6">
